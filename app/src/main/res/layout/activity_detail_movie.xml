@@ -266,7 +266,7 @@
         android:layout_height="60dp"
         app:layout_constraintBottom_toBottomOf="parent"
         android:text="Get Ticket"
-        android:layout_marginBottom="24dp"
+        android:layout_marginVertical="24dp"
         android:backgroundTint="@color/blue"
         android:fontFamily="@font/poppins_bold"
         android:textStyle="bold"

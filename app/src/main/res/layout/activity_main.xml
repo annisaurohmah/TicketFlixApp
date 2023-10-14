@@ -140,7 +140,8 @@
             android:orientation="horizontal">
             <!--        card 1-->
             <LinearLayout
-                android:paddingHorizontal="18dp"
+                android:id="@+id/card_elemental"
+                android:layout_marginHorizontal="18dp"
                 android:layout_below="@id/judul_top_movie"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -253,6 +254,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <!--        card 1-->
             <LinearLayout
                 android:paddingHorizontal="18dp"

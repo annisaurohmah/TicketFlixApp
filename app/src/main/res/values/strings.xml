@@ -41,24 +41,24 @@
         <item>Pontianak</item>
     </array>
 
-    <string-array name="cinema_yogyakarta_array">
+    <array name="cinema_yogyakarta_array">
         <item>Ambarrukmo XXI</item>
         <item>Sleman City Hall CGV</item>
         <item>Plaza Ambarukmo Blitz</item>
         <item>CGV Hartono Mall Yogyakarta</item>
         <item>XXI Galeria Mall Yogyakarta</item>
         <item>CGV Jogja City Mall</item>
-    </string-array>
+    </array>
 
-    <string-array name="studio_type_array">
+    <array name="studio_type_array">
         <item>Regular 2D</item>
         <item>3D</item>
         <item>Premiere</item>
         <item>IMAX</item>
         <item>4DX</item>
-    </string-array>
+    </array>
 
-    <string-array name="items_A_to_L_array">
+    <array name="items_A_to_L_array">
         <item>A</item>
         <item>B</item>
         <item>C</item>
@@ -71,9 +71,9 @@
         <item>J</item>
         <item>K</item>
         <item>L</item>
-    </string-array>
+    </array>
 
-    <integer-array name="numbers_1_to_10_array">
+    <array name="numbers_1_to_10_array">
         <item>1</item>
         <item>2</item>
         <item>3</item>
@@ -84,10 +84,10 @@
         <item>8</item>
         <item>9</item>
         <item>10</item>
-    </integer-array>
+    </array>
 
     <style name="MyTextInputEditText" parent="text">
-        <item name="android:textColor">@color/white</item> <!-- Set text color to white -->
+        <!-- Set text color to white -->
         <item name="android:paddingStart">24dp</item>
         <item name="backgroundTint">@color/white</item>
         <item name="android:paddingTop">16dp</item>
