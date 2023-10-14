@@ -50,6 +50,41 @@
         <item>CGV Jogja City Mall</item>
     </string-array>
 
+    <string-array name="studio_type_array">
+        <item>Regular 2D</item>
+        <item>3D</item>
+        <item>Premiere</item>
+        <item>IMAX</item>
+        <item>4DX</item>
+    </string-array>
+
+    <string-array name="items_A_to_L_array">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+        <item>G</item>
+        <item>H</item>
+        <item>I</item>
+        <item>J</item>
+        <item>K</item>
+        <item>L</item>
+    </string-array>
+
+    <integer-array name="numbers_1_to_10_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </integer-array>
 
 
 </resources>

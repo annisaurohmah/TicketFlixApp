@@ -275,9 +275,4 @@
         tools:ignore="RtlHardcoded" />
 
 
-
-
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,6 +4,322 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/darkBlue"
     tools:context=".OrderSummaryActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/navbar"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:padding="20dp"
+        android:gravity="center"
+        android:background="@color/darkBlue">
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/navbar_text"
+            app:layout_constraintTop_toTopOf="@id/navbar_text"
+            app:layout_constraintBottom_toBottomOf="@id/navbar_text"
+            android:src="@drawable/baseline_arrow_back_ios_new_24"/>
+        <TextView
+            android:id="@+id/navbar_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Book Ticket"
+            android:textAlignment="center"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/title_14" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <View
+        android:id="@+id/line_yellow"
+        app:layout_constraintTop_toBottomOf="@id/navbar"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/yellow"/>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo"
+        app:layout_constraintTop_toBottomOf="@id/line_yellow"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <ImageView
+        android:id="@+id/card"
+        android:layout_width="wrap_content"
+        android:layout_height="600dp"
+        android:src="@drawable/ticket_card"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/card"
+        app:layout_constraintLeft_toLeftOf="@id/card"
+        app:layout_constraintRight_toRightOf="@id/card"
+        android:padding="24dp">
+        <ImageView
+            android:id="@+id/img_elemen"
+            android:layout_width="120dp"
+            android:layout_height="130dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:src="@drawable/elemental2"/>
+        <TextView
+            android:id="@+id/elemen_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Elemental"
+            style="@style/title_20"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/img_elemen"
+            android:layout_marginLeft="8dp"/>
+        <TextView
+            android:id="@+id/text_des"
+            app:layout_constraintTop_toBottomOf="@id/elemen_title"
+            app:layout_constraintLeft_toLeftOf="@id/elemen_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1h 23m | 13+ | 4.9"
+            style="@style/text"
+            android:textColor="@color/grey"
+            android:textSize="14sp"/>
+        <ImageView
+            app:layout_constraintLeft_toRightOf="@id/text_des"
+            app:layout_constraintTop_toTopOf="@id/text_des"
+            android:padding="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_star_24"/>
+        <TextView
+            android:id="@+id/cinema"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ambarrukmo Plaza XXI"
+            style="@style/title_14"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/text_des"
+            app:layout_constraintLeft_toLeftOf="@id/text_des"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saturday, 15 October 2023"
+            style="@style/title_14"
+            app:layout_constraintTop_toBottomOf="@id/cinema"
+            app:layout_constraintLeft_toLeftOf="@id/text_des"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12:05"
+            style="@style/title_14"
+            app:layout_constraintTop_toBottomOf="@id/date"
+            app:layout_constraintLeft_toLeftOf="@id/text_des"
+            android:textColor="@color/black"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintLeft_toLeftOf="@id/header"
+        app:layout_constraintRight_toRightOf="@+id/header"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="16dp">
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order Number"
+            style="@style/title_14"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/order_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="121121231124533"
+            android:layout_marginBottom="4dp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            style="@style/title_14"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/title1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Studio"
+            app:layout_constraintTop_toBottomOf="@id/order_number"
+            style="@style/title_14"
+            android:textStyle="bold"
+            android:layout_marginVertical="4dp"
+            android:textColor="@color/black"
+            tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/type_studio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Reguler 2D"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/title1"
+            style="@style/title_14"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seat"
+            app:layout_constraintTop_toBottomOf="@id/type_studio"
+            style="@style/title_14"
+            android:textStyle="bold"
+            android:layout_marginVertical="4dp"
+            android:textColor="@color/black"
+            tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/type_seat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="E9"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/title2"
+            style="@style/title_14"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/title3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Payment method"
+            app:layout_constraintTop_toBottomOf="@id/type_seat"
+            style="@style/title_14"
+            android:textStyle="bold"
+            android:layout_marginVertical="4dp"
+            android:textColor="@color/black"
+            tools:ignore="MissingConstraints" />
+        <LinearLayout
+            android:id="@+id/type_payment_bank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/title3"
+            app:layout_constraintLeft_toLeftOf="@id/title3"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/type_payment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Transfer Bank"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/title3"
+                style="@style/title_14"
+                tools:ignore="MissingConstraints" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/title_14"
+                android:textColor="@color/black"
+                android:text=" (Bank)"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/title4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bill"
+            app:layout_constraintTop_toBottomOf="@id/type_payment_bank"
+            style="@style/title_14"
+            android:textStyle="bold"
+            android:layout_marginVertical="4dp"
+            android:textColor="@color/black"
+            tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/type_bill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IDR 100.000"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/title4"
+            style="@style/title_14"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/title5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Convinience Fee"
+            app:layout_constraintTop_toBottomOf="@id/type_bill"
+            style="@style/title_14"
+            android:textStyle="bold"
+            android:layout_marginVertical="4dp"
+            android:textColor="@color/black"
+            tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/type_fee"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="IDR 0"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/title5"
+            style="@style/title_14"
+            tools:ignore="MissingConstraints" />
+        <View
+            android:id="@+id/line_yellow2"
+            app:layout_constraintTop_toBottomOf="@id/type_fee"
+            android:layout_width="300dp"
+            android:layout_marginVertical="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_height="2dp"
+            android:background="@color/yellow"/>
+        <TextView
+            android:id="@+id/title6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Payment"
+            app:layout_constraintTop_toBottomOf="@id/line_yellow2"
+            style="@style/title_14"
+            android:textStyle="bold"
+            android:layout_marginVertical="4dp"
+            android:textColor="@color/black"
+            tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/type_total"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="IDR 100.000"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/title6"
+            style="@style/title_14"
+            tools:ignore="MissingConstraints" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/back_to_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/card"
+        style="@style/title_14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Back to Home"/>
+
+
+
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
