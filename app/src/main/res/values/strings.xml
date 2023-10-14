@@ -86,5 +86,13 @@
         <item>10</item>
     </integer-array>
 
+    <style name="MyTextInputEditText" parent="text">
+        <item name="android:textColor">@color/white</item> <!-- Set text color to white -->
+        <item name="android:paddingStart">24dp</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="android:paddingTop">16dp</item>
+    </style>
+
+
 
 </resources>
