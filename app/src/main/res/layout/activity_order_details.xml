@@ -136,10 +136,10 @@
                     android:id="@+id/spinner_cities"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:padding="8dp"
                     android:layout_marginBottom="8dp"
                     android:spinnerMode="dropdown"
                     style="@style/title_14"
+                    android:paddingHorizontal="8dp"
                     android:paddingEnd="16dp"
                     android:drawableEnd="@drawable/baseline_keyboard_arrow_down_24"
                     android:background="@drawable/custom_dropdown"/>
@@ -155,7 +155,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
-                    android:padding="8dp"
+                    android:paddingHorizontal="8dp"
                     android:spinnerMode="dropdown"
                     style="@style/title_14"
                     android:paddingEnd="16dp"
@@ -171,7 +171,7 @@
                     android:id="@+id/spinner_studio"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="8dp"
+                    android:paddingHorizontal="8dp"
                     android:layout_marginBottom="8dp"
                     android:spinnerMode="dropdown"
                     style="@style/title_14"
@@ -189,8 +189,8 @@
                     android:layout_gravity="center"
                     android:id="@+id/date_picker"
                     android:layout_width="wrap_content"
-                    android:layout_height="150dp"
-                    android:datePickerMode="spinner"
+                    android:layout_height="350dp"
+                    android:datePickerMode="calendar"
                     android:layout_marginBottom="8dp"
                     style="@style/text"
                     android:background="@color/white"
@@ -235,37 +235,37 @@
                         android:layout_height="300dp"
                         android:src="@drawable/seat"
                         android:layout_marginVertical="16dp"/>
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Spinner
+                        android:id="@+id/spinner_seatA"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-                        <Spinner
-                            android:id="@+id/spinner_seat1"
-                            android:layout_width="match_parent"
-                            android:layout_height="48dp"
-                            android:padding="8dp"
-                            android:entries="@array/items_A_to_L_array"
-                            android:layout_weight="1"
-                            android:layout_marginRight="4dp"
-                            android:layout_marginBottom="8dp"
-                            android:spinnerMode="dropdown"
-                            style="@style/title_14"
-                            android:background="@drawable/custom_dropdown"/>
-                        <Spinner
-                            android:id="@+id/spinner_seatA"
-                            android:layout_width="match_parent"
-                            android:layout_height="48dp"
-                            android:padding="8dp"
-                            android:entries="@array/numbers_1_to_10_array"
-                            android:layout_weight="1"
-                            android:layout_marginLeft="4dp"
-                            android:layout_marginBottom="8dp"
-                            android:spinnerMode="dropdown"
-                            style="@style/title_14"
-                            android:background="@drawable/custom_dropdown"/>
-                    </LinearLayout>
+                        android:paddingHorizontal="8dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="8dp"
+                        android:spinnerMode="dropdown"
+                        style="@style/title_14"
+                        android:background="@drawable/custom_dropdown"/>
 
-                    <View
+                    <Spinner
+                        android:id="@+id/spinner_seats"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="4dp"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:spinnerMode="dropdown"
+                        style="@style/title_14"
+                        android:background="@drawable/custom_dropdown"/>
+                </LinearLayout>
+
+
+                <View
                         android:id="@+id/line_yellow3"
                         app:layout_constraintBottom_toTopOf="@+id/detail_orders"
                         android:layout_width="match_parent"
@@ -322,7 +322,7 @@
                         android:id="@+id/spinner_bill"
                         android:layout_width="match_parent"
                         android:layout_height="48dp"
-                        android:padding="8dp"
+                        android:paddingHorizontal="8dp"
                         android:layout_marginBottom="8dp"
                         android:spinnerMode="dropdown"
                         style="@style/title_14"
@@ -338,23 +338,28 @@
                             android:id="@+id/spinner_bank"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:padding="8dp"
+                            android:paddingHorizontal="8dp"
                             android:layout_weight="1"
                             android:layout_marginRight="4dp"
                             android:layout_marginBottom="8dp"
                             android:spinnerMode="dropdown"
                             style="@style/title_14"
                             android:background="@drawable/custom_dropdown"/>
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/text_field"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:padding="8dp"
-                            android:layout_weight="1"
-                            android:layout_marginLeft="4dp"
-                            android:layout_marginBottom="8dp"
-                            android:hint="Account Number"
-                            android:background="@drawable/custom_dropdown"/>
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/text_field"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="4dp"
+                                android:layout_marginBottom="8dp"
+                                android:hint="Account Number"
+                                android:background="@drawable/custom_dropdown"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
                     </LinearLayout>
                 </LinearLayout>
         </LinearLayout>

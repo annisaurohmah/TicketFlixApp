@@ -86,6 +86,24 @@
         <item>10</item>
     </array>
 
+        <array name="payment_methods_array">
+            <item>Credit Card</item>
+            <item>Debit Card</item>
+            <item>PayPal</item>
+            <item>Bank Transfer</item>
+            <item>Google Pay</item>
+        </array>
+
+       <string-array name="bank_types_array">
+            <item>Mandiri</item>
+            <item>BSI</item>
+            <item>BRI</item>
+            <item>Danamon</item>
+        </string-array>
+
+
+
+
     <style name="MyTextInputEditText" parent="text">
         <!-- Set text color to white -->
         <item name="android:paddingStart">24dp</item>
