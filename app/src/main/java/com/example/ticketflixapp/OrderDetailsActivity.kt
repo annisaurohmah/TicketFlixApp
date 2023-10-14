@@ -72,43 +72,72 @@ class OrderDetailsActivity : AppCompatActivity() {
 // Mengatur adapter ke Spinner
             spinnerSeats.adapter = adapter
 //
-//            val PayAdapter = ArrayAdapter(
-//                this@OrderDetailsActivity, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, pay_method
-//            )
-//            PayAdapter.setDropDownViewResource(
-//                androidx.appcompat.R.layout.support_simple_spinner_dropdown_item
-//            )
-//            spinnerBill.adapter = PayAdapter
+            val PayAdapter = ArrayAdapter(
+                this@OrderDetailsActivity, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, pay_method
+            )
+            PayAdapter.setDropDownViewResource(
+                androidx.appcompat.R.layout.support_simple_spinner_dropdown_item
+            )
+            spinnerBill.adapter = PayAdapter
 
-//            val BankAdapter = ArrayAdapter(
-//                this@OrderDetailsActivity, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, bank
-//            )
-//            BankAdapter.setDropDownViewResource(
-//                androidx.appcompat.R.layout.support_simple_spinner_dropdown_item
-//            )
-//            spinnerBank.adapter = BankAdapter
-//
-//
-//            var selectedDate = ""
-//            datePicker.init(
-//                datePicker.year,
-//                datePicker.month,
-//                datePicker.dayOfMonth
-//            ) { _, year, month, day ->
-//                selectedDate = "$day/${month + 1}/$year " }
-//                val SpannableDate = SpannableString("Selected date is $selectedDate")
-//                selectDate.text = SpannableDate
-//
-//            var selectedTime = ""
-//            pickerTime.setOnTimeChangedListener { _, hourOfDay, minutes ->
-//                selectedTime = String.format("%02d:%02d", hourOfDay, minutes)
-//            }
-//
-//
+            val BankAdapter = ArrayAdapter(
+                this@OrderDetailsActivity, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, bank
+            )
+            BankAdapter.setDropDownViewResource(
+                androidx.appcompat.R.layout.support_simple_spinner_dropdown_item
+            )
+            spinnerBank.adapter = BankAdapter
+
+
+            binding.datePicker.init(
+                binding.datePicker.year,
+                binding.datePicker.month,
+                binding.datePicker.dayOfMonth
+            ) { _, year, month, day ->
+                val selectedDate = "$day/${month + 1}/$year"
+                binding.selectDate.text = "Selected date is $selectedDate"
+            }
+
+            var selectedTime = ""
+            pickerTime.setOnTimeChangedListener { _, hourOfDay, minutes ->
+                selectedTime = String.format("%02d:%02d", hourOfDay, minutes)
+            }
+
+
             btnOrder.setOnClickListener {
-                val intentToOrderSummaryActivity = Intent(this@OrderDetailsActivity, OrderSummaryActivity::class.java)
+                // Mendapatkan nilai yang dipilih dari spinner dan picker
+                val selectedCity = spinnerCities.selectedItem.toString()
+                val selectedCinema = spinnerCinema.selectedItem.toString()
+                val selectedStudio = spinnerStudio.selectedItem.toString()
+                val selectedSeatA = spinnerSeatA.selectedItem.toString()
+                val selectedSeatNumber = spinnerSeats.selectedItem.toString()
+                val selectedPaymentMethod = spinnerBill.selectedItem.toString()
+                val selectedBank = spinnerBank.selectedItem.toString()
+                val selectedDate = binding.selectDate.text.toString()
+                val selectedTime = selectedTime // Diambil dari pickerTime
+
+                // Membuat intent untuk OrderSummaryActivity dan menyertakan data yang akan dikirimkan
+                val intentToOrderSummaryActivity = Intent(this@OrderDetailsActivity, OrderSummaryActivity::class.java).apply {
+                    putExtra("SELECTED_CITY", selectedCity)
+                    putExtra("SELECTED_CINEMA", selectedCinema)
+                    putExtra("SELECTED_STUDIO", selectedStudio)
+                    putExtra("SELECTED_SEAT_A", selectedSeatA)
+                    putExtra("SELECTED_SEAT_NUMBER", selectedSeatNumber)
+                    putExtra("SELECTED_PAYMENT_METHOD", selectedPaymentMethod)
+                    putExtra("SELECTED_BANK", selectedBank)
+                    putExtra("SELECTED_DATE", selectedDate)
+                    putExtra("SELECTED_TIME", selectedTime)
+                }
+
+                // Memulai activity OrderSummaryActivity dengan membawa data yang telah disiapkan
                 startActivity(intentToOrderSummaryActivity)
             }
+
+            btnBack.setOnClickListener{
+                val intentBack = Intent(this@OrderDetailsActivity, DetailMovieActivity::class.java)
+                startActivity(intentBack)
+            }
+
         }
 //
 

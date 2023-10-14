@@ -175,8 +175,6 @@
                     android:layout_marginBottom="8dp"
                     android:spinnerMode="dropdown"
                     style="@style/title_14"
-                    android:entries="@array/city_array"
-                    android:paddingEnd="16dp"
                     android:background="@drawable/custom_dropdown"/>
 <!--                date-->
                 <TextView
@@ -188,8 +186,8 @@
                 <DatePicker
                     android:layout_gravity="center"
                     android:id="@+id/date_picker"
-                    android:layout_width="wrap_content"
-                    android:layout_height="350dp"
+                    android:layout_width="250dp"
+                    android:layout_height="400dp"
                     android:datePickerMode="calendar"
                     android:layout_marginBottom="8dp"
                     style="@style/text"
@@ -202,7 +200,7 @@
                     android:layout_height="wrap_content"
                     android:padding="8dp"
                     android:paddingStart="16dp"
-                    android:text="Selected date : date"
+                    android:text="Selected date is"
                     android:textColor="@color/darkBlue"
                     android:layout_marginBottom="24dp"
                     android:background="@drawable/custom_dropdown"
@@ -243,9 +241,9 @@
                         android:id="@+id/spinner_seatA"
                         android:layout_width="0dp"
                         android:layout_weight="1"
+                        android:layout_marginRight="4dp"
                         android:layout_height="wrap_content"
                         android:paddingHorizontal="8dp"
-                        android:layout_marginRight="4dp"
                         android:layout_marginBottom="8dp"
                         android:spinnerMode="dropdown"
                         style="@style/title_14"
@@ -257,7 +255,8 @@
                         android:layout_weight="1"
                         android:layout_marginLeft="4dp"
                         android:layout_height="wrap_content"
-                        android:padding="8dp"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="12dp"
                         android:layout_marginBottom="8dp"
                         android:spinnerMode="dropdown"
                         style="@style/title_14"
@@ -326,7 +325,6 @@
                         android:layout_marginBottom="8dp"
                         android:spinnerMode="dropdown"
                         style="@style/title_14"
-                        android:entries="@array/city_array"
                         android:paddingEnd="16dp"
                         android:background="@drawable/custom_dropdown"/>
 
@@ -336,18 +334,21 @@
                         android:orientation="horizontal">
                         <Spinner
                             android:id="@+id/spinner_bank"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:layout_height="wrap_content"
                             android:paddingHorizontal="8dp"
-                            android:layout_weight="1"
                             android:layout_marginRight="4dp"
                             android:layout_marginBottom="8dp"
                             android:spinnerMode="dropdown"
                             style="@style/title_14"
                             android:background="@drawable/custom_dropdown"/>
                         <com.google.android.material.textfield.TextInputLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            app:hintEnabled="false"
+                            android:paddingVertical="24dp">
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/text_field"
                                 android:layout_width="match_parent"

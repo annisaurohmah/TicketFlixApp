@@ -19,6 +19,10 @@ class DetailMovieActivity : AppCompatActivity() {
                 val intentToOrderDetailsActivity = Intent (this@DetailMovieActivity, OrderDetailsActivity::class.java)
                 startActivity(intentToOrderDetailsActivity)
             }
+            btnBack.setOnClickListener{
+                val intentBack = Intent(this@DetailMovieActivity, MainActivity::class.java)
+                startActivity(intentBack)
+            }
         }
     }
 }
