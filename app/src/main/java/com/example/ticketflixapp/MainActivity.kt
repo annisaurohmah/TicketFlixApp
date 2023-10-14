@@ -15,7 +15,11 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val usernameField = intent.getStringExtra("EXTRA_USERNAME")
+
         with(binding) {
+            username.text = usernameField
+
             cardElemental.setOnClickListener{
                 val intentToDetailMovieActivity = Intent(this@MainActivity, DetailMovieActivity::class.java)
                 startActivity(intentToDetailMovieActivity)

@@ -31,8 +31,8 @@ class LoginActivity : AppCompatActivity() {
                 if (inputUsername == DEFAULT_USERNAME && inputPassword == DEFAULT_PASSWORD) {
                     val intentToMainActivity = Intent(this@LoginActivity, MainActivity::class.java)
                         .apply {
-                            putExtra(EXTRA_USERNAME, inputUsername)
-                            putExtra(EXTRA_PASSWORD, inputPassword)
+                            putExtra("EXTRA_USERNAME", inputUsername)
+                            putExtra("EXTRA_PASSWORD", inputPassword)
                         }
                     startActivity(intentToMainActivity)
                 } else {
