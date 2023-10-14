@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">TicketFlixApp</string>
+    <string name="desc_text">The film journeys alongside an unlikely pair, Ember and Wade, in a city where fire-, water-, land- and air-residents live together. The fiery young woman and the go-with-the-flow guy are about to discover something elemental: how much they actually have in common</string>
 
     <style name="text">
         <item name="android:textSize">12sp</item>
@@ -15,7 +16,7 @@
 
     <style name="title_20">
         <item name="android:textSize">20sp</item>
-        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
         <item name="android:textColor">@color/yellow</item>
     </style>
 
@@ -26,5 +27,29 @@
         <item name="colorControlNormal">@color/white</item>
         <item name="colorControlActivated">@color/white</item>
     </style>
+
+    <array name="city_array">
+        <item>Jakarta</item>
+        <item>Surabaya</item>
+        <item>Bandung</item>
+        <item>Medan</item>
+        <item>Semarang</item>
+        <item>Palembang</item>
+        <item>Makassar</item>
+        <item>Denpasar</item>
+        <item>Batam</item>
+        <item>Pontianak</item>
+    </array>
+
+    <string-array name="cinema_yogyakarta_array">
+        <item>Ambarrukmo XXI</item>
+        <item>Sleman City Hall CGV</item>
+        <item>Plaza Ambarukmo Blitz</item>
+        <item>CGV Hartono Mall Yogyakarta</item>
+        <item>XXI Galeria Mall Yogyakarta</item>
+        <item>CGV Jogja City Mall</item>
+    </string-array>
+
+
 
 </resources>
