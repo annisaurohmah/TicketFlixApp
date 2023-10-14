@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/darkBlue"
+    tools:context=".MainActivity">
+    
+<!--    top notif-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hello,"
+                style="@style/text"/>
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Eliana Amelia"
+                style="@style/title_14"/>
+        </LinearLayout>
+
+<!--        notif-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/bg_dark"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:src="@drawable/baseline_circle_24_dark"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_notifications_24"
+                app:layout_constraintTop_toTopOf="@id/bg_dark"
+                app:layout_constraintBottom_toBottomOf="@id/bg_dark"
+                app:layout_constraintLeft_toLeftOf="@id/bg_dark"
+                app:layout_constraintRight_toRightOf="@id/bg_dark"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+    
+<!--    line break-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/yellow"
+        android:layout_marginVertical="3dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginVertical="8dp"
+        android:layout_marginHorizontal="24dp"
+        android:gravity="center_vertical">
+        <!--    search bar-->
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/id_SV"
+            android:background="@drawable/rectangle_search"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="8dp"
+            android:iconifiedByDefault="false"
+            android:padding="4dp"
+            android:queryHint="Search"
+            style="@style/text"
+            android:theme="@style/WhiteSearchViewTheme"/>
+
+        <!--    filter-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/bg_yellow"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:src="@drawable/baseline_circle_24"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_filter_alt_24"
+                app:layout_constraintTop_toTopOf="@id/bg_yellow"
+                app:layout_constraintBottom_toBottomOf="@id/bg_yellow"
+                app:layout_constraintLeft_toLeftOf="@id/bg_yellow"
+                app:layout_constraintRight_toRightOf="@id/bg_yellow"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp">
+<!--        Judul top movie-->
+        <LinearLayout
+            android:id="@+id/judul_top_movie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Top Movie"
+                android:layout_weight="1"
+                android:gravity="start"
+                style="@style/title_20"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="See More>"
+                android:textAlignment="textEnd"
+                android:layout_weight="1"
+                style="@style/text"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@id/judul_top_movie"
+            android:layout_marginVertical="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!--        card 1-->
+            <LinearLayout
+                android:paddingHorizontal="18dp"
+                android:layout_below="@id/judul_top_movie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/elemental"
+                    android:layout_width="140dp"
+                    android:layout_height="170dp"
+                    android:src="@drawable/elemental2" />
+                <TextView
+                    android:id="@+id/title_elemental"
+                    style="@style/title_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Elemental" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:id="@+id/rate_elemental"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4.9"
+                        style="@style/text"
+                        android:textColor="@color/yellow"/>
+                    <ImageView
+                        android:paddingHorizontal="2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/baseline_star_24"/>
+                </LinearLayout>
+            </LinearLayout>
+
+<!--      card 2-->
+                <LinearLayout
+                    android:paddingHorizontal="12dp"
+                    android:layout_below="@id/judul_top_movie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/incep"
+                        android:layout_width="140dp"
+                        android:layout_height="170dp"
+                        android:src="@drawable/incep" />
+                    <TextView
+                        android:id="@+id/title_incep"
+                        style="@style/title_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Inception" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        <TextView
+                            android:id="@+id/rate_incep"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4.8"
+                            style="@style/text"
+                            android:textColor="@color/yellow"/>
+                        <ImageView
+                            android:paddingHorizontal="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/baseline_star_24"/>
+                    </LinearLayout>
+                </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+<!--    Recommendations-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp">
+        <!--        Judul recommendations-->
+        <LinearLayout
+            android:id="@+id/judul_recommendation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Recommendations"
+                android:layout_weight="2"
+                android:gravity="start"
+                style="@style/title_20"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="See More>"
+                android:textAlignment="textEnd"
+                android:layout_weight="1"
+                style="@style/text"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@id/judul_recommendation"
+            android:layout_marginVertical="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!--        card 1-->
+            <LinearLayout
+                android:paddingHorizontal="18dp"
+                android:layout_below="@id/judul_top_movie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/berhenti"
+                    android:layout_width="140dp"
+                    android:layout_height="170dp"
+                    android:src="@drawable/berhenti" />
+                <TextView
+                    android:id="@+id/title_berhenti"
+                    style="@style/title_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Ketika Berhenti di..." />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:id="@+id/rate_berhenti"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4.9"
+                        style="@style/text"
+                        android:textColor="@color/yellow"/>
+                    <ImageView
+                        android:paddingHorizontal="2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/baseline_star_24"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--      card 2-->
+            <LinearLayout
+                android:paddingHorizontal="12dp"
+                android:layout_below="@id/judul_top_movie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/menara"
+                    android:layout_width="140dp"
+                    android:layout_height="170dp"
+                    android:src="@drawable/menara" />
+                <TextView
+                    android:id="@+id/title_menara"
+                    style="@style/title_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Negeri 5 Menara" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:id="@+id/rate_menara"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4.8"
+                        style="@style/text"
+                        android:textColor="@color/yellow"/>
+                    <ImageView
+                        android:paddingHorizontal="2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/baseline_star_24"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/navbar"
+        layout="@layout/navbar"/>
+
+</LinearLayout>
